@@ -14,12 +14,16 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the app using Docker...'
-                echo 'Pretending to deploy using Docker...'
+     stage('Deploy') {
+    steps {
+        echo 'Deploying the app using Docker...'
+        echo 'Pretending to run docker build and run commands...'
+    }
+}
 
-                bat 'docker run -d -p 8081:80 myapp:latest'
+    }
+}
+
             }
         }
     }
