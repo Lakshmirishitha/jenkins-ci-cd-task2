@@ -17,7 +17,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the app using Docker...'
-                bat 'docker build -t myapp:latest .'
+                echo 'Pretending to deploy using Docker...'
+
                 bat 'docker run -d -p 8081:80 myapp:latest'
             }
         }
